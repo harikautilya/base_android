@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_my_profile"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="My Profile" />
+
+        <item
+            android:id="@+id/nav_update_profile"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Update Profile" />
+
+        <item
+            android:id="@+id/nav_search_connections"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Search Connections" />
+
+        <item
+            android:id="@+id/nav_add_new"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Add New Connection" />
+
+        <item
+            android:id="@+id/nav_view_all_users"
+            android:icon="@drawable/ic_menu_share"
+            android:title="VIew All User" />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_menu_send"
+            android:title="Logout" />
+    </group>
+
+</menu>

@@ -1,0 +1,72 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.company.name"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    dataBinding {
+        enabled = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    // Support lib
+    implementation deps.android.support.appcompatV7
+    // Design lib
+    implementation deps.android.support.design
+    // Constraint layout
+    implementation deps.android.support.constraintLayout
+    // Gson lib
+    implementation deps.other.gsonConvertor
+    // Gson lib
+    implementation deps.android.support.gson
+    // RecyclerView
+    implementation deps.android.support.recycleView
+    // Timber - Logging library
+    implementation deps.other.timber
+    // Picasso - Image loading library
+    implementation deps.other.picasso
+    // Retofit - server data lib
+    implementation deps.other.api
+    //CardView
+    implementation deps.android.support.cardView
+    implementation deps.google.firebase.core
+
+    implementation 'com.android.support:multidex:1.0.3'
+
+    testImplementation deps.junit
+    androidTestImplementation deps.android.support.test.runner
+    androidTestImplementation deps.android.support.test.espressoCore
+    implementation deps.rx.android
+    implementation deps.rx.java
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+
+
+    // dependency injection
+    implementation deps.dagger.source
+    annotationProcessor deps.dagger.complier
+    annotationProcessor deps.dagger.processor
+    implementation deps.dagger.support
+    // Lifecycle
+    implementation deps.lifecycle.runtime
+    implementation deps.lifecycle.ext
+
+
+
+    annotationProcessor deps.lifecycle.complie
+    compileOnly 'javax.annotation:jsr250-api:1.0'
+
+}
